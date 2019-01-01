@@ -1,0 +1,6 @@
+/.idea
+/__pychache__
+/venv
+result.png
+recursion_tree.json
+/*.bat
