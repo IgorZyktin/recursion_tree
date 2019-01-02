@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="recursion_tree",
-    version="1.0.0",
+    version="1.0",
     author="Igor Zyktin",
     author_email="nicord@yandex.ru",
     description="Builds recursive calls tree and saves it as a PNG file.",
