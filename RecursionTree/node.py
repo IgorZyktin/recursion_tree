@@ -189,6 +189,6 @@ def analyze_nodes(structure: List[dict]) -> List[Node]:
         top_line = top_line.center(width)
         bottom_line = bottom_line.center(width)
 
-        node.text = f'{top_line}\n{"-" * width}\n{bottom_line}'
+        node.text = f'{top_line}\n{"".center(width, "-")}\n{bottom_line}'
 
     return nodes
