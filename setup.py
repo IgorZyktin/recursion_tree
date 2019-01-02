@@ -1,18 +1,22 @@
-from setuptools import setup, find_packages
+import RecursionTree
+from setuptools import setup
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="RecursionTree",
-    version="1.2",
+    version="1.3",
     author="Igor Zyktin",
     author_email="nicord@yandex.ru",
     description="Builds recursive calls tree and saves it as a PNG file.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/IgorZyktin/recursion_tree",
-    packages=find_packages(),
+    packages=['RecursionTree'],
+	package_data={
+        '': ['*.ttf'],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
