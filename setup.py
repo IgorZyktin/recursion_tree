@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="recursion_tree",
+    name="recursiontree",
     version="1.0",
     author="Igor Zyktin",
     author_email="nicord@yandex.ru",
