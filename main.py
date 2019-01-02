@@ -64,10 +64,10 @@ def main():
     """
     # Run out target function and save results
 
-    # triple(x=1)
+    # triple(x=3)
     # fact(x=5)
-    # fibo(x=5)
-    random_tree(x=3)
+    fibo(x=4)
+    # random_tree(x=6)
 
     # Now we can recreate its structure
     tree_structure = load_nodes_from_json()
