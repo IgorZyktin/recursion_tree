@@ -16,4 +16,4 @@ After the run, parameters of the call will be saved as recursion_tree.json.
 Additional settings might be used via settings.py.
 
 Example of use:<br>
-![fibo_calls](/tree_example.png)
+![fibo_calls](/treeexample.png)
