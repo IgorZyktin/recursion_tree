@@ -3,7 +3,7 @@ Transforms recursive functions in graphical form.
 
 Installation:
 ```
-pip install recursion_tree
+pip install RecursionTree
 ``` 
 Usage:<br>
 ```python
