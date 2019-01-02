@@ -7,7 +7,7 @@ import json
 from typing import List
 from node import Node
 
-TREE_FILE = "recursion_tree.json"
+TREE_FILE = "recursiontree.json"
 
 
 def recursion_tree(func):
