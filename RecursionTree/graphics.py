@@ -14,7 +14,12 @@ from RecursionTree.settings import FONT_SIZE, FUNC_NAME_COLOR, LABEL_COLOR, BG_C
 from RecursionTree.settings import BOUNDARY_COLOR, BOUNDARY_EDGE_COLOR, DRAW_BOUNDARY
 from RecursionTree.settings import MARGIN, VER_SPACING, TEXT_OUTLINE_SIZE, NODE_OUTLINE_SIZE
 
-FONT_FILE = os.path.join(os.getcwd(), 'Excalibur-Monospace.ttf')
+FONT_FILE_1 = 'Excalibur-Monospace.ttf'
+if os.path.isfile(FONT_FILE_1):
+    FONT_FILE = 'Excalibur-Monospace.ttf'
+else:
+    FONT_FILE = 'arial.ttf'
+
 FONT = ImageFont.truetype(FONT_FILE, FONT_SIZE)
 Point = namedtuple('Point', ['x', 'y'])
 
