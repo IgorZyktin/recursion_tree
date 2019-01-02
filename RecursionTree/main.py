@@ -6,9 +6,9 @@
 # pylint: disable=C0103
 # pylint: disable=R1710
 import random
-from node import analyze_nodes
-from decorator import recursion_tree, load_nodes_from_json
-from graphics import draw_tree
+from RecursionTree.node import analyze_nodes
+from RecursionTree.decorator import recursion_tree, load_nodes_from_json
+from RecursionTree.graphics import draw_tree
 
 
 @recursion_tree

@@ -5,7 +5,7 @@
 """
 import json
 from typing import List
-from node import Node
+from RecursionTree.node import Node
 
 TREE_FILE = "recursiontree.json"
 

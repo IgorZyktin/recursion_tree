@@ -5,7 +5,7 @@
 """
 # pylint: disable=C0103
 from typing import List
-import settings
+from venv import settings
 
 
 class Node:
