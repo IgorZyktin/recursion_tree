@@ -6,7 +6,6 @@
 DRAW_BOUNDARY = False
 DRAW_CALLS = True
 
-FONT_FILE = 'Excalibur-Monospace.ttf'
 FONT_SIZE = 25
 
 NODE_OUTLINE_SIZE = 3

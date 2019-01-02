@@ -5,7 +5,7 @@
 """
 # pylint: disable=C0103
 from typing import List
-from RecursionTree import settings
+from RecursionTree.settings import MARGIN, VER_SPACING
 
 
 class Node:
@@ -24,7 +24,7 @@ class Node:
         self.returns = data_dict['returns']
         self.name = data_dict['name']
         self.x = 0
-        self.y = self.depth * settings.VER_SPACING
+        self.y = self.depth * VER_SPACING
         self.parent = None
         self.children = []
         self.descendants = []
@@ -61,7 +61,7 @@ class Node:
         """
         descendants_x = [node.x for node in self.descendants] + [self.x]
         furthest_left = min(descendants_x)
-        furthest_left -= self.size[0] // 2 + settings.MARGIN
+        furthest_left -= self.size[0] // 2 + MARGIN
         return furthest_left
 
     @property
@@ -71,7 +71,7 @@ class Node:
         """
         descendants_x = [node.x for node in self.descendants] + [self.x]
         furthest_right = max(descendants_x)
-        furthest_right += self.size[0] // 2 + settings.MARGIN
+        furthest_right += self.size[0] // 2 + MARGIN
         return furthest_right
 
     @property
@@ -81,7 +81,7 @@ class Node:
         """
         descendants_y = [node.y for node in self.descendants] + [self.y]
         furthest_bottom = min(descendants_y)
-        furthest_bottom -= (self.size[1] // 2) + settings.MARGIN
+        furthest_bottom -= (self.size[1] // 2) + MARGIN
         return furthest_bottom
 
     @property
@@ -91,7 +91,7 @@ class Node:
         """
         descendants_y = [node.y for node in self.descendants] + [self.y]
         furthest_top = max(descendants_y)
-        furthest_top += (self.size[1] // 2) + settings.MARGIN
+        furthest_top += (self.size[1] // 2) + MARGIN
         return furthest_top
 
     def __str__(self) -> str:
@@ -120,7 +120,7 @@ class Node:
             nodes_on_level = [node for node in nodes if node.depth == level]
 
             for i in range(len(nodes_on_level) - 1):
-                target_left_bound = nodes_on_level[i].right + settings.MARGIN
+                target_left_bound = nodes_on_level[i].right + MARGIN
                 shift = target_left_bound - nodes_on_level[i + 1].left
 
                 nodes_on_level[i + 1].shift_branch(shift)
@@ -134,7 +134,7 @@ class Node:
                           "kwargs": None, "returns": None})
 
         fake_node.x = nodes[0].x
-        fake_node.y = nodes[0].y - settings.VER_SPACING
+        fake_node.y = nodes[0].y - VER_SPACING
         nodes[0].parent = fake_node
         nodes.append(fake_node)
 

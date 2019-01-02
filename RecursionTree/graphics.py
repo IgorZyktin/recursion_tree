@@ -3,16 +3,18 @@
     Drawing module
 
 """
+import os
 from collections import namedtuple
 
 from PIL import Image, ImageDraw, ImageFont
 
 from RecursionTree.node import Node
-from venv.settings import CONN_COLOR, CONN_WIDTH, NUM_SHIFT, DRAW_CALLS, OUTLINE_COLOR
-from venv.settings import FONT_FILE, FONT_SIZE, FUNC_NAME_COLOR, LABEL_COLOR, BG_COLOR
-from venv.settings import BOUNDARY_COLOR, BOUNDARY_EDGE_COLOR, DRAW_BOUNDARY
-from venv.settings import MARGIN, VER_SPACING, TEXT_OUTLINE_SIZE, NODE_OUTLINE_SIZE
+from RecursionTree.settings import CONN_COLOR, CONN_WIDTH, NUM_SHIFT, DRAW_CALLS, OUTLINE_COLOR
+from RecursionTree.settings import FONT_SIZE, FUNC_NAME_COLOR, LABEL_COLOR, BG_COLOR
+from RecursionTree.settings import BOUNDARY_COLOR, BOUNDARY_EDGE_COLOR, DRAW_BOUNDARY
+from RecursionTree.settings import MARGIN, VER_SPACING, TEXT_OUTLINE_SIZE, NODE_OUTLINE_SIZE
 
+FONT_FILE = os.path.join(os.getcwd(), 'Excalibur-Monospace.ttf')
 FONT = ImageFont.truetype(FONT_FILE, FONT_SIZE)
 Point = namedtuple('Point', ['x', 'y'])
 
