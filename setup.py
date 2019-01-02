@@ -1,4 +1,3 @@
-import RecursionTree
 from setuptools import setup
 
 with open("README.md", "r") as fh:
@@ -14,9 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/IgorZyktin/recursion_tree",
     packages=['RecursionTree'],
-	package_data={
-        '': ['*.ttf'],
-    },
+    package_data={'': ['*.ttf'], },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

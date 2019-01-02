@@ -5,7 +5,7 @@
 """
 # pylint: disable=C0103
 from typing import List
-from venv import settings
+from RecursionTree import settings
 
 
 class Node:
