@@ -104,10 +104,10 @@ def search(inp_list: list, left: int, right: int, x: int):
 
 if __name__ == '__main__':
     # Run out target function and save results
-    triple(x=2)
+    # triple(x=2)
     # fact(x=5)
     # fibo(x=5)
-    # random_tree(x=3)
+    random_tree(x=3)
     # delivery(["Tinky Winky", "Dipsy ", "Laa-Laa", "Po"])
     # euclidean(var_a=15, var_b=5)
     # search(inp_list=[1, 2, 3, 4, 5, 6, 7, 8, 9], left=2, right=6, x=5)

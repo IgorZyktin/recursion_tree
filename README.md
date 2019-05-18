@@ -48,12 +48,12 @@ or by passing a dictionary to the decorator.
 
 Default style:
 
-![demo1](https://github.com/IgorZyktin/RecursionTree/blob/master/demo_default.png "Default style")
+![demo1](https://github.com/IgorZyktin/recursion_tree/blob/master/demo_default.png "Default style")
 
 Scientific style:
 
-![demo1](https://github.com/IgorZyktin/RecursionTree/blob/master/demo_scientific.png "Scientific style")
+![demo1](https://github.com/IgorZyktin/recursion_tree/blob/master/demo_scientific.png "Scientific style")
 
 Default style with boundaries:
 
-![demo1](https://github.com/IgorZyktin/RecursionTree/blob/master/demo_boundary.png "Default style")
+![demo1](https://github.com/IgorZyktin/recursion_tree/blob/master/demo_boundary.png "Default style")
