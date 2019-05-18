@@ -3,25 +3,31 @@
     Settings module
 
 """
-DRAW_BOUNDARY = False
-DRAW_CALLS = True
-
-FONT_SIZE = 25
-
-NODE_OUTLINE_SIZE = 3
-VER_SPACING = 300
-MARGIN = 40
-
-NUM_SHIFT = 7
-CONN_WIDTH = 4
-CONN_COLOR = (0, 255, 0, 255)
-
-LABEL_COLOR = (32, 32, 32, 255)
-BG_COLOR = (64, 64, 64, 255)
-OUTLINE_COLOR = (255, 255, 255, 255)
-
-FUNC_NAME_COLOR = (0, 0, 0, 255)
-TEXT_OUTLINE_SIZE = 15
-
-BOUNDARY_COLOR = (255, 0, 255, 16)
-BOUNDARY_EDGE_COLOR = (255, 255, 255, 255)
+settings = {
+    'file': None,
+    'autostart': True,
+    'min_node_width': 50,
+    'min_node_height': 50,
+    'char_width': 9,
+    'char_height': 10,
+    'ver_spacing': 200,
+    'margin': 20,
+    'draw_calls': True,
+    'draw_boundary': False,
+    'color_background': 'gray',
+    'color_num_background': '#27def4',
+    'color_boundary': '#f400b8',
+    'color_boundary_stroke': 'white',
+    'color_node_body': '#27def4',
+    'color_node_stroke': 'black',
+    'color_text': 'black',
+    'color_num_text': 'black',
+    'color_connection': 'black',
+    'node_stroke_width': 2,
+    'node_stroke_bezier': True,
+    'node_conn_width': 2,
+    'node_opacity': 1.0,
+    'node_radius': 5,
+    'node_num_radius': 15,
+    'node_bound_radius': 20,
+}

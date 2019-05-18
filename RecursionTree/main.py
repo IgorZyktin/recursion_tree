@@ -3,18 +3,26 @@
     Main program module
 
 """
-# pylint: disable=C0103
-# pylint: disable=R1710
 import random
-from RecursionTree.node import analyze_nodes
-from RecursionTree.decorator import recursion_tree, load_nodes_from_json
-from RecursionTree.graphics import draw_tree
+from RecursionTree import recursion_tree
+
+scientific_style = {
+    'draw_boundary': False,
+    'color_background': 'white',
+    'color_num_background': 'white',
+    'color_node_body': 'white',
+    'color_node_stroke': 'black',
+    'color_text': 'black',
+    'color_num_text': 'black',
+    'color_connection': 'black',
+    'node_stroke_bezier': False
+}
 
 
-@recursion_tree
-def triple(x: int):
+@recursion_tree({'draw_boundary': True})
+def triple(x: int) -> str:
     """
-        Triplets
+    Triplets
     """
     if x == 0:
         return 'Dead end'
@@ -27,7 +35,7 @@ def triple(x: int):
 @recursion_tree
 def fact(x: int) -> int:
     """
-        Factorial
+    Factorial
     """
     if x < 2:
         return 1
@@ -35,10 +43,10 @@ def fact(x: int) -> int:
     return x * fact(x=x-1)
 
 
-@recursion_tree
+@recursion_tree(scientific_style)
 def fibo(x: int) -> int:
     """
-        Fibonacci sequence
+    Fibonacci sequence
     """
     if x in [1, 2]:
         return 1
@@ -47,9 +55,9 @@ def fibo(x: int) -> int:
 
 
 @recursion_tree
-def random_tree(x: int):
+def random_tree(x: int) -> str:
     """
-        Randomly generated tree
+    Randomly generated tree
     """
     if x == 0:
         return 'Dead end'
@@ -58,24 +66,48 @@ def random_tree(x: int):
         random_tree(x=x - 1)
 
 
-def main():
+@recursion_tree
+def delivery(recipient: list):
     """
-        Main program flow
+    Recursive list separation
     """
-    # Run out target function and save results
+    if len(recipient) == 1:
+        return recipient[0]
+    else:
+        mid = len(recipient) // 2
+        first_half = recipient[:mid]
+        second_half = recipient[mid:]
 
-    # triple(x=3)
-    # fact(x=5)
-    fibo(x=4)
-    # random_tree(x=6)
+        delivery(recipient=first_half)
+        delivery(recipient=second_half)
 
-    # Now we can recreate its structure
-    tree_structure = load_nodes_from_json()
-    nodes = analyze_nodes(tree_structure)
 
-    # generate picture
-    draw_tree(nodes, show=True, save=True)
+@recursion_tree
+def euclidean(var_a: int, var_b: int):
+    """
+    Euclidean Algorithm
+    For finding the greatest common divisor of two numbers
+    """
+    if var_b == 0:
+        return var_a
+    return euclidean(var_a=var_b, var_b=var_a % var_b)
+
+
+@recursion_tree
+def search(inp_list: list, left: int, right: int, x: int):
+    if left <= right:
+        if inp_list[left] == x:
+            return left
+        return search(inp_list=inp_list, left=left + 1, right=right, x=x)
+    return 0
 
 
 if __name__ == '__main__':
-    main()
+    # Run out target function and save results
+    triple(x=2)
+    # fact(x=5)
+    # fibo(x=5)
+    # random_tree(x=3)
+    # delivery(["Tinky Winky", "Dipsy ", "Laa-Laa", "Po"])
+    # euclidean(var_a=15, var_b=5)
+    # search(inp_list=[1, 2, 3, 4, 5, 6, 7, 8, 9], left=2, right=6, x=5)
