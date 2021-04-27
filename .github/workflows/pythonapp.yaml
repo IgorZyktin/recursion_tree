@@ -20,7 +20,7 @@ jobs:
             -   name: Lint with pylint
                 run: |
                     pip install pylint
-                    pylint
+                    pylint ./recursion_tree
             -   name: Test with pytest
                 run: |
                     pip install pytest

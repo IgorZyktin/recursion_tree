@@ -32,25 +32,32 @@ scientific_style = {
 
 
 @recursion_tree(scientific_style)
-def fibo(x: int) -> int:
-    return 1 if x in [1, 2] else fibo(x=x - 1) + fibo(x=x - 2)
+def calc_fibonacci(x: int) -> int:
+    """Calculate the Fibonacci sequence."""
+    if x == 1 or x == 2:
+        return 1
+
+    return calc_fibonacci(x=x - 1) + calc_fibonacci(x=x - 2)
 
 
 # No parameters means default settings
 @recursion_tree
-def random_tree(x: int) -> str:
-    if x == 0:
+def random_tree(depth: int) -> str:
+    """Generate random tree."""
+    if depth == 0:
         return 'Dead end'
 
-    for _ in range(random.randint(1, x)):
-        random_tree(x=x - 1)
+    for _ in range(random.randint(1, depth)):
+        random_tree(depth=depth - 1)
 
 
 if __name__ == '__main__':
     # Run out target function and save results
-    fibo(x=5)
+    calc_fibonacci(x=5)
     random_tree(x=4)
 ```
+
+You could find more examples in **recursion_tree/demo.py**.
 
 ## Style setup
 
