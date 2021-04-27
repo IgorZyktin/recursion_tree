@@ -4,7 +4,7 @@
 
 """
 import random
-from RecursionTree import recursion_tree
+from recursion_tree import recursion_tree
 
 scientific_style = {
     'draw_boundary': False,

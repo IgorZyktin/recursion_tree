@@ -1,22 +1,7 @@
-# Recursion tree
-
-Illustrates recursive calls graphically.
-
-## Installation
-
-```shell
-pip install recursion_tree
-``` 
-
-## Usage
-
-Just add the 'recursion_tree' decorator to any recursive function.
-The result will be automatically saved as an SVG file.
-Additional settings might be achieved via settings.py 
-or by passing arguments to the decorator.
-
-```python3
+# -*- coding: utf-8 -*-
+"""Basic usage demonstration."""
 import random
+
 from recursion_tree import recursion_tree
 
 scientific_style = {
@@ -50,18 +35,3 @@ if __name__ == '__main__':
     # Run out target function and save results
     fibo(x=5)
     random_tree(x=4)
-```
-
-## Style setup
-
-Default style:
-
-![demo1](./demo_default.png "Default style")
-
-Scientific style:
-
-![demo1](./demo_scientific.png "Scientific style")
-
-Default style with boundaries:
-
-![demo1](./demo_boundary.png "With boundaries")

@@ -6,8 +6,8 @@
 from functools import wraps
 from typing import Callable, Union
 
-from RecursionTree.graphics import draw_tree
-from RecursionTree.settings import settings
+from recursion_tree.graphics import draw_tree
+from recursion_tree.settings import settings
 
 
 def recursion_tree(argument: Union[dict, Callable]):

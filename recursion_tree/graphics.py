@@ -5,7 +5,7 @@
 """
 import os
 from io import StringIO
-from RecursionTree.node import Node, analyze_nodes
+from recursion_tree.node import Node, analyze_nodes
 
 
 def draw_boundary(node: Node) -> None:
